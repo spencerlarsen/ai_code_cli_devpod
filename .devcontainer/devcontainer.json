@@ -30,7 +30,8 @@
                 "ms-python.python",
                 "charliermarsh.ruff",
                 "anthropic.claude-code",
-                "openai.codex"
+                "openai.codex",
+                "google.gemini-cli-vscode-ide-companion"
             ]
         }
     },

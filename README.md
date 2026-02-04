@@ -23,13 +23,14 @@ devpod provider use docker
 1. Clone this repository and `cd` into it
 2. Run `devpod up . --ide vscode`
 
-That's it! Claude Code and Codex CLI are automatically installed and ready to use.
+That's it! Claude Code, Codex CLI, and Gemini CLI are automatically installed and ready to use.
 
 ## What's Included
 
 ### AI Coding Agents
 - **Claude Code** - Anthropic's AI coding assistant (auto-installed)
 - **OpenAI Codex CLI** - OpenAI's AI coding agent (auto-installed)
+- **Gemini CLI** - Google's Gemini CLI (auto-installed)
 
 ### Development Tools
 - **Python** + **uv** - Python with fast package management
@@ -61,6 +62,16 @@ codex --yolo
 codex
 ```
 
+### Gemini CLI
+
+```bash
+# Start in yolo mode - no approvals or sandbox (recommended for containers)
+gemini --yolo
+
+# Or start with normal permissions
+gemini
+```
+
 ## Customization
 
 Edit `.devcontainer/devcontainer.json` to customize your environment:
@@ -76,7 +87,12 @@ See [devcontainer features](https://containers.dev/features) for available optio
 
 The `.devcontainer/` folder contains:
 - `devcontainer.json` - Container configuration with VS Code extensions
-- `setup.sh` - Post-creation script that installs Claude Code, Codex CLI, and uv
+- `setup.sh` - Post-creation script that installs Claude Code, Codex CLI, Gemini CLI, and uv
+
+VS Code extensions included by default:
+- Claude Code
+- Codex
+- Gemini CLI Companion
 
 The `.claude/settings.json` file pre-configures Claude Code to bypass permission prompts (safe within containers).
 

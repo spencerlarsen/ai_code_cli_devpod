@@ -68,6 +68,15 @@ else
     echo "Codex CLI is already installed"
 fi
 
+# Install Google Gemini CLI
+if ! command -v gemini &> /dev/null; then
+    echo "Installing Gemini CLI..."
+    npm install -g @google/gemini-cli --loglevel=error --no-fund --no-audit
+    echo "Gemini CLI installed successfully"
+else
+    echo "Gemini CLI is already installed"
+fi
+
 # Install OpenCode
 if ! command -v opencode &> /dev/null; then
     echo "Installing OpenCode..."
@@ -90,3 +99,8 @@ if [ -f "$SCRIPT_DIR/.bash_aliases" ]; then
 fi
 
 echo "=== Setup Complete ==="
+echo ""
+echo "AI Coding Assistants:"
+echo "  Claude Code: claude --dangerously-skip-permissions"
+echo "  Codex CLI:   codex --yolo"
+echo "  Gemini CLI:  gemini"
