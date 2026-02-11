@@ -1,0 +1,9 @@
+{
+    "github.copilot.advanced": {
+        "debug.overrideEngine": "copilot-chat"
+    },
+    "github.copilot.chat.welcomeMessage": "never",
+    "github.copilot.enable": {
+        "*": true
+    }
+}

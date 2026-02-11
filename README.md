@@ -31,6 +31,8 @@ That's it! Claude Code, Codex CLI, and Gemini CLI are automatically installed an
 - **Claude Code** - Anthropic's AI coding assistant (auto-installed)
 - **OpenAI Codex CLI** - OpenAI's AI coding agent (auto-installed)
 - **Gemini CLI** - Google's Gemini CLI (auto-installed)
+- **Gemini Code Assist** - Google's AI coding assistant with real-time code completion and chat (auto-installed)
+- **GitHub Copilot** - GitHub's AI pair programmer pre-configured with all permissions enabled for sandboxed development (requires active subscription)
 
 ### Development Tools
 - **Python** + **uv** - Python with fast package management
@@ -93,8 +95,10 @@ VS Code extensions included by default:
 - Claude Code
 - Codex
 - Gemini CLI Companion
+- Gemini Code Assist
+- GitHub Copilot (with Chat)
 
-The `.claude/settings.json` file pre-configures Claude Code to bypass permission prompts (safe within containers).
+The `.claude/settings.json` file pre-configures Claude Code to bypass permission prompts (safe within containers). GitHub Copilot is pre-configured with all permissions enabled for all file types, providing seamless AI assistance in the sandboxed environment. Gemini Code Assist provides additional AI-powered code completion and documentation features.
 
 ## See Also
 

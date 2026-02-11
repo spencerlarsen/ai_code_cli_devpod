@@ -31,8 +31,17 @@
                 "charliermarsh.ruff",
                 "anthropic.claude-code",
                 "openai.codex",
-                "google.gemini-cli-vscode-ide-companion"
-            ]
+                "google.gemini-cli-vscode-ide-companion",
+                "google.geminicodeassist",
+                "github.copilot",
+                "github.copilot-chat"
+            ],
+            "settings": {
+                "github.copilot.enable": {
+                    "*": true
+                },
+                "github.copilot.chat.welcomeMessage": "never"
+            }
         }
     },
 
