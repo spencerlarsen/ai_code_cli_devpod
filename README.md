@@ -33,6 +33,7 @@ That's it! Claude Code, Codex CLI, and Gemini CLI are automatically installed an
 - **Gemini CLI** - Google's Gemini CLI (auto-installed)
 - **Gemini Code Assist** - Google's AI coding assistant with real-time code completion and chat (auto-installed)
 - **GitHub Copilot** - GitHub's AI pair programmer pre-configured with all permissions enabled for sandboxed development (requires active subscription)
+- **GitHub Copilot CLI** - Terminal-based AI assistant for shell commands and code explanations (auto-installed, requires authentication)
 
 ### Development Tools
 - **Python** + **uv** - Python with fast package management
@@ -74,6 +75,25 @@ gemini --yolo
 gemini
 ```
 
+### GitHub Copilot CLI
+
+```bash
+# First time setup - authenticate with GitHub
+copilot auth
+
+# Start interactive mode
+copilot
+
+# Programmatic mode - pass a prompt directly
+copilot -p "Show me this week's commits and summarize them"
+
+# Allow all tools without approval (recommended for containers only)
+copilot -p "Revert the last commit" --allow-all-tools
+
+# Allow specific tools only
+copilot --allow-tool 'shell(git)' --deny-tool 'shell(rm)'
+```
+
 ## Customization
 
 Edit `.devcontainer/devcontainer.json` to customize your environment:
@@ -98,7 +118,10 @@ VS Code extensions included by default:
 - Gemini Code Assist
 - GitHub Copilot (with Chat)
 
-The `.claude/settings.json` file pre-configures Claude Code to bypass permission prompts (safe within containers). GitHub Copilot is pre-configured with all permissions enabled for all file types, providing seamless AI assistance in the sandboxed environment. Gemini Code Assist provides additional AI-powered code completion and documentation features.
+The `.claude/settings.json` file pre-configures Claude Code to bypass permission prompts (safe within containers). 
+GitHub Copilot is pre-configured with all permissions enabled for all file types, providing seamless AI assistance in the sandboxed environment. 
+The GitHub Copilot CLI is also installed for terminal-based AI interactions, offering command suggestions and explanations directly from your shell. 
+Gemini Code Assist provides additional AI-powered code completion and documentation features.
 
 ## See Also
 

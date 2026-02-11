@@ -40,7 +40,11 @@
                 "github.copilot.enable": {
                     "*": true
                 },
-                "github.copilot.chat.welcomeMessage": "never"
+                "github.copilot.chat.welcomeMessage": "never",
+                "chat.agent.enabled": true,
+                "chat.tools.terminal.enableAutoApprove": true,
+                "chat.tools.urls.autoApprove": ["*"],
+                "chat.tools.global.autoApprove": true
             }
         }
     },

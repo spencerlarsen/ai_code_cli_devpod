@@ -77,6 +77,16 @@ else
     echo "Gemini CLI is already installed"
 fi
 
+# Install GitHub Copilot CLI
+if ! command -v copilot &> /dev/null; then
+    echo "Installing GitHub Copilot CLI..."
+    npm install -g @githubnext/github-copilot-cli --loglevel=error --no-fund --no-audit
+    echo "GitHub Copilot CLI installed successfully"
+    echo "Note: Run 'copilot auth' to authenticate"
+else
+    echo "GitHub Copilot CLI is already installed"
+fi
+
 # Install OpenCode
 if ! command -v opencode &> /dev/null; then
     echo "Installing OpenCode..."
@@ -101,6 +111,7 @@ fi
 echo "=== Setup Complete ==="
 echo ""
 echo "AI Coding Assistants:"
-echo "  Claude Code: claude --dangerously-skip-permissions"
-echo "  Codex CLI:   codex --yolo"
-echo "  Gemini CLI:  gemini"
+echo "  Claude Code:        claude --dangerously-skip-permissions"
+echo "  Codex CLI:          codex --yolo"
+echo "  Gemini CLI:         gemini"
+echo "  GitHub Copilot CLI: copilot (run 'copilot auth' first)"
