@@ -78,20 +78,11 @@ gemini
 ### GitHub Copilot CLI
 
 ```bash
-# First time setup - authenticate with GitHub
-copilot auth
+# Start in permissive mode - no approvals or sandbox (recommended for containers)
+copilot --allow-all
 
-# Start interactive mode
+# Or start with normal permissions
 copilot
-
-# Programmatic mode - pass a prompt directly
-copilot -p "Show me this week's commits and summarize them"
-
-# Allow all tools without approval (recommended for containers only)
-copilot -p "Revert the last commit" --allow-all-tools
-
-# Allow specific tools only
-copilot --allow-tool 'shell(git)' --deny-tool 'shell(rm)'
 ```
 
 ## Customization

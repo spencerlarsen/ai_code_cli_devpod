@@ -80,9 +80,9 @@ fi
 # Install GitHub Copilot CLI
 if ! command -v copilot &> /dev/null; then
     echo "Installing GitHub Copilot CLI..."
-    npm install -g @githubnext/github-copilot-cli --loglevel=error --no-fund --no-audit
+    npm install -g @github/copilot --loglevel=error --no-fund --no-audit
     echo "GitHub Copilot CLI installed successfully"
-    echo "Note: Run 'copilot auth' to authenticate"
+    echo "Note: Run 'copilot' and use '/login' to authenticate"
 else
     echo "GitHub Copilot CLI is already installed"
 fi
